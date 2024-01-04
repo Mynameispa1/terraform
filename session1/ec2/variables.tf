@@ -16,5 +16,9 @@ variable "inbound-from-port" {
 variable "cidr_blocks" {
     type = list
     default = ["0.0.0.0/0"]
-}    
+} 
 
+variable "ami-value" {
+    type = string
+    default = "ami-03265a0778a880afb"
+}

@@ -1,13 +1,3 @@
-resource "aws_instance" "myec2" {
-  ami           = var.ami-value  #devops practice
-  instance_type = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.mysg.id]
-
-  tags = {
-    Name = "Terraform"
-  }
-}
-
 resource "aws_security_group" "mysg" {
   name        = "var.sg-name"
   description = "var.sg-description"
@@ -33,4 +23,3 @@ resource "aws_security_group" "mysg" {
     Name = "roboshop-all-aws"
   }
 }
-
